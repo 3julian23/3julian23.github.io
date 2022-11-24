@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Portafolio del Aprendiz</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/Logo Sencillo Neón para Bar (2).png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/Logo Sencillo Neón para Bar (2).png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/Logo Sencillo Neón para Bar (2).png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Busqueda nueva.." aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notificaciones</p>
+              <a class="dropdown-item preview-item">
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Configuracion</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Mensaje privado
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/Logo Sencillo Neón para Bar (2).png" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Ajustes
+              </a>
+              <a class="dropdown-item" href="index.html">
+                <i class="ti-power-off text-primary"></i>
+                Cerrar sesión
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">PIELES DE LA BARRA LATERAL</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Claro</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Oscuro</div>
+          <p class="settings-heading mt-2">PIELES DE CABECERA</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Agregar</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Reunión de revisión del equipo a las 3:00 p. m.
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepárate para la presentación
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolver todos los tickets de baja prioridad que vencen hoy
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Programar reunión para la próxima semana
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Revision del proyecto
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Portafolio Aprendiz</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Pseudocodigo</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_1_PSE.docx"> Actividad 1</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_2_PSE.zip"> Actividad 2</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_3_PSE.zip"> Actividad 3</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_4_PSE.zip"> Actividad 4</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_5_PSE.zip"> Actividad 5</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_6_PSE.zip"> Actividad 6</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_7_PSE.zip"> Actividad 7</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_8_PSE.zip"> Actividad 8</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_9_PSE.zip"> Actividad 9</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_10_PSE.zip"> Actividad 10</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_11_PSE.zip"> Actividad 11</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_12_PSE.zip"> Actividad 12</a></li>
+                <li  class="nav-item"><a class="nav-link" href="PSEINT/ACTIVIDAD_13_PSE.zip"> Actividad 13</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">HTML 5</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/HTML5/actividad1/index.html"> Actividad 1</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/HTML5/actividad2/index.html"> Actividad 2</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/HTML5/actividad3/index.html"> Actividad 3</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/HTML5/actividad4/Index.html"> Actividad 4</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://drive.google.com/file/d/1P7M_D66xwyrdCtrrbeMw5m7Ukaa95ZpI/view"> Actividad 5</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://drive.google.com/file/d/1UtT9cvs2fBl1YVOF0ElvzwgrUcusy4Se/view"> Actividad 6</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://www.youtube.com/watch?v=5_12Ovk-qWQ"> Actividad 7</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">CSS 3</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/CSS3/Actividad1/index.html"> Actividad 1</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/CSS3/Actividad2/index.html"> Actividad 2</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/CSS3/Actividad3/index.html"> Actividad 3</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/CSS3/Actividad4/index.html"> Actividad 4</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/CSS3/actividad5/index.html"> Actividad 5</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/CSS3/actividad6/index.html"> Actividad 6</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Javascript 6</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad1/index.html"> Actividad 1</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad2/index.html"> Actividad 2</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad3/index.html"> Actividad 3</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad4/index.html"> Actividad 4</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad5/index.html"> Actividad 5</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad6/index.html"> Actividad 6</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad7/index.html"> Actividad 7</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/JS/Actividad8/index.html"> Actividad 8</a></li>
+                <li  class="nav-item"><a class="nav-link" href="https://3julian23.github.io/CSS3/actividad9/index.html"> Actividad 9</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Python</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_1_ PYTHON.docx"> Actividad 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_2_ PYTHON/EXTRUCTURA SECUANCIALES.zip"> Actividad 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_3_ PYTHON/ESTRUCTURA CONDICIONALES.zip"> Actividad 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_4_ PYTHON.zip"> Actividad 4</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_5_ PYTHON/ESTRUCTURA CICLICAS.zip"> Actividad 5</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_6_ PYTHON/ESTRUCTURA CICLICAS.zip"> Actividad 6</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_7_ PYTHON/ESTRUCTURA CICLICAS (2) (1).zip"> Actividad 7</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_8_ PYTHON.docx"> Actividad 8</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_9_ PYTHON/EJEMPLOS.zip"> Actividad 9</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_10_ PYTHON/actividad10.zip"> Actividad 10</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_11_ PYTHON/actividad11 (1).zip"> Actividad 11</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_12_ PYTHON/DICCIONARIO.zip"> Actividad 12</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_13_ PYTHON.zip"> Actividad 13</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_14_ PYTHON/ACTIVIDAD 14.zip"> Actividad 14</a></li>
+                <li class="nav-item"><a class="nav-link" href="PYTHON/ACTIVIDAD_15_ PYTHON.zip"> Actividad 15</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Paginas de usuario</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Acceso </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Registro </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Paginas de error</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper bg-info">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold text-white">Bienvenido, estamos en linea!</h3>
+                  <h6 class="font-weight-normal mb-0m text-white">Analisis y Desarrollo de Sistemas de Informacion <span class="text-dark">Sena Regional Sucre</span></h6>
+                </div>
+                <div class="col-12 col-xl-4">
+                 <div class="justify-content-end d-flex">
+                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                    <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                     <i class="mdi mdi-calendar"></i>(22 Nov 2022)
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
+                      <a class="dropdown-item" href="#">Enero - Marzo</a>
+                      <a class="dropdown-item" href="#">Marzo - Junio</a>
+                      <a class="dropdown-item" href="#">Junio - Agosto</a>
+                      <a class="dropdown-item" href="#">Agosto - Noviembre</a>
+                    </div>
+                  </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people mt-auto">
+                  <img src="images/imagen.webp" alt="people">
+                  <div class="weather-info">
+                    <div class="d-flex text-white">
+                      <div>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>25<sup>C</sup></h2>
+                      </div>
+                      <div class="ml-2 text-white">
+                        <h4 class="location font-weight-normal">Colombia</h4>
+                        <h6 class="font-weight-normal">Sincelejo</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">HTML5 <img src="images/HTML5_logo_and_wordmark.svg.png" height="40em"></p>
+                      <p class="fs-30 mb-2">07</p>
+                      <p>ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">CSS3 <img src="images/CSS3_logo_and_wordmark.svg.png" height="40em"></p>
+                      <p class="fs-30 mb-2">06</p>
+                      <p>ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                  <div class="card card-light-blue">
+                    <div class="card-body">
+                      <p class="mb-4">JAVASCRIPT <img src="images/Unofficial_JavaScript_logo_2.svg.png" height="40em"> </p>
+                      <p class="fs-30 mb-2">09</p>
+                      <p>ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 stretch-card transparent">
+                  <div class="card card-light-danger">
+                    <div class="card-body">
+                      <p class="mb-4">PYTHON <img src="images/Python-logo-notext.svg.png" height="40em"></p>
+                      <p class="fs-30 mb-2">16</p>
+                      <p>ACTIVIDADES</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row">
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title"> ACTIVIDADES DE CLASES...</p>
+                              <h1 class="text-primary">2022</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">A.D.S.I</h3>
+                              <p class="mb-2 mb-xl-0">El programa de formación ADSI (Análisis y Desarrollo de Sistemas de Información) del Centro de Servicios Financieros en la Regional Distrito Capital SENA       (Servicio Nacional de Aprendizaje), en sincelejo Colombia, es un foco para el desarrollo de las competencias en desarrollo de software y TIC, que prepara a los aprendices para la vida y el trabajo, con lo cual se pretende impulsar el crecimiento de múltiples sectores laborales, el perfil de los egresados les permite proponer soluciones en la empresa, que ayuden a mejorar los diferentes procesos. Durante el tiempo que se lleva orientando esta formación los aprendices han mostrado excelentes resultados en competencias que realiza la entidad.</p>
+                            </div>  
+                            </div>
+                          <div class="col-md-12 col-xl-9">
+                            <div class="row">
+                              <div class="col-md-6 border-right">
+                                <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                  <table class="table table-borderless report-table">
+                                    <tr>
+                                      <td class="text-muted">HTML5</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">50</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">CSS3</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">70</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">JAVASCRIPT</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">90</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">PYTHON</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">60</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">PSEINT</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">75</h5></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mt-3 text-center">
+                                <img src="images/5119 (1).png">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-XL-12 grid-margin">
+          <div class="row">
+            <div class="col-xl-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h3>Detalles del alumno</h3>
+                  <p class="card-title">Gráficos</p>
+                  <div class="charts-data">
+                    <div class="mt-3">
+                      <p class="mb-0">Rendimiento</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="progress progress-md flex-grow-1 mr-4">
+                          <div class="progress-bar bg-inf0" role="progressbar" style="width: 70%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="mb-0">70%</p>
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <p class="mb-0">Asistencias</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="progress progress-md flex-grow-1 mr-4">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="mb-0">100%</p>
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <p class="mb-0">Puntos Ganados</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="progress progress-md flex-grow-1 mr-4">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="mb-0">60%</p>
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <p class="mb-0">Trabajos Entregados</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="progress progress-md flex-grow-1 mr-4">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <p class="mb-0">85%</p>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 stretch-card grid-margin grid-margin-md-0">
+              <div class="card data-icon-card-primary">
+                <div class="card-body">
+                  <p class="card-title text-white text-center">ESTUDIANTE :</p>                      
+                  <div class="row">
+                    <div class="col-12 text-white text-center">
+                      <h3>Julian vergara paternina</h3>
+                      <p class="text-white font-weight-500 mb-0">Ah sido muy disciplinado e el area del trabajo  </p>
+                      <div class="col-md-12 mt-3 text-center">
+                        <img src="images/un-buen-estudiante-sentado-en-montón-de-libros-libro-lectura-caracteres-masculinos-o-texto-concepto-educación-aprendizaje-varios-203269565.jpg" class="text-center" width="35%" height="35%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. <a href="https://eliseovega.github.io/" target="_blank">Ing. Eliseo Vega</a> Instructor de Formacion Profesional  
+            - Aprendiz: JULIAN VERGARA </span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">SENA - CITS <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Programa <a href="https://www.themewagon.com/" target="_blank">ADSI</a></span> 
+          </div>
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
